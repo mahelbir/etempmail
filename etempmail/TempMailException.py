@@ -1,6 +1,6 @@
 class TempMailException(Exception):
-    def __init__(self, exception_type: str, exception_message: str, response=None) -> None:
-        if response is not None:
+    def __init__(self, exception_type: str, exception_message: str, response=None, debug: bool = True) -> None:
+        if debug and response is not None:
             print(response.status_code)
             print(response.headers)
             print(response.text)

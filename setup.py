@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 pkg_name = "etempmail"
 setuptools.setup(
     name=pkg_name,
-    version="1.0.0.0",
+    version="2.0.0.0",
     author="Mahmuthan Elbir",
     author_email="me@mahmuthanelbir.com.tr",
     description="A simple Python module to get free disposable temporary email address",
