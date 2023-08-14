@@ -19,7 +19,7 @@ from etempmail import TempMail
 temp_mail = TempMail()  # or TempMail('WHHKSIX7915')
 
 print(temp_mail.domains())  # response -> (domain_id, domain_name)
-# [('5', 'gmail.com'), ('4', 'hotmail.com'), ('2', 'yandex.com')]
+# [('5', 'istanbultaksi.xyz'), ('4', 'privmail.com'), ('2', 'mailers.edu.pl')]
 print(temp_mail.id)
 # 7915
 print(temp_mail.email)
@@ -33,6 +33,15 @@ temp_mail.recover('LHKXDMG7910')  # Recover email address
 temp_mail.change()  # Change email address by random domain
 temp_mail.change(4)  # Change email address by domain_id
 ```
+
+## Note
+
+You can use the following websites and similars
+
++ https://etempmail.com
++ https://gecicimail.com.tr
++ https://toprakmail.com
++ https://segamail.com
 
 ## License
 

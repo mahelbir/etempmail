@@ -18,13 +18,13 @@ class TempMail:
             'accept-language': 'en-US',
             'origin': self.url,
             'referer': self.url,
-            'sec-ch-ua': '"Opera GX";v="89", "Chromium";v="103", "_Not:A-Brand";v="24"',
+            'sec-ch-ua': '"Not/A)Brand";v="99", "Opera";v="101", "Chromium";v="115"',
             'sec-ch-ua-mobile': '?0',
             'sec-ch-ua-platform': '"Windows"',
             'sec-fetch-dest': 'empty',
             'sec-fetch-mode': 'cors',
             'sec-fetch-site': 'same-origin',
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 OPR/89.0.4447.64',
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 OPR/101.0.0.0',
             'x-requested-with': 'XMLHttpRequest',
         }
         if recovery:
@@ -47,7 +47,7 @@ class TempMail:
         if response.status_code != 200:
             raise TempMailException('domains', 'request', response, self.debug_response)
         else:
-            return findall('<option value="(\d+)".*?>(.+?)</option>', response.text)
+            return findall(r'<option value="(\d+)".*?>(.+?)</option>', response.text)
 
     def inbox(self) -> list:
         response = self.__session.post(f'{self.url}/getInbox', headers=self.__headers)
