@@ -1,6 +1,10 @@
-# ETempMail
+# etempmail
 
-A simple Python module to get free disposable temporary email address.
+[![PyPI](https://img.shields.io/pypi/v/etempmail)](https://pypi.org/project/etempmail/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/etempmail)](https://pypi.org/project/etempmail/)
+[![PyPI - License](https://img.shields.io/pypi/l/etempmail)](https://pypi.org/project/etempmail/)
+
+A simple module to get free disposable temporary email address.
 
 ## Installation
 
@@ -16,27 +20,27 @@ pip install etempmail
 from etempmail import TempMail
 
 # recovery: str = None, url: str = 'https://etempmail.com', debug_response: bool = True
-temp_mail = TempMail()  # or TempMail('WHHKSIX7915')
+temp_mail = TempMail()  # or TempMail('OGFHVIX7915')
 
-print(temp_mail.domains())  # response -> (domain_id, domain_name)
-# [('5', 'istanbultaksi.xyz'), ('4', 'privmail.com'), ('2', 'mailers.edu.pl')]
 print(temp_mail.id)
 # 7915
+
 print(temp_mail.email)
-# sidavm5dhc@istanbultaksi.xyz
+# sidavm5dhc@upperbox.xyz
+
 print(temp_mail.recovery)
-# WHHKSIX7915
+# OGFHVIX7915
+
 print(temp_mail.inbox())
 # [{'subject': 'test', 'from': 'Anonymousemail <noreply@gmail.com>', 'date': '16/08/2022 19:40:47', 'body': 'Test Body Code: 123'}]
 
-temp_mail.recover('LHKXDMG7910')  # Recover email address
-temp_mail.change()  # Change email address by random domain
-temp_mail.change(4)  # Change email address by domain_id
+temp_mail.recover('OGFHVSZ115741')  # Recover email address
+temp_mail.change()  # Change email address
 ```
 
 ## Note
 
-You can use the following websites and similars
+You can use the following domains or similar:
 
 + https://etempmail.com
 + https://gecicimail.com.tr
@@ -45,4 +49,4 @@ You can use the following websites and similars
 
 ## License
 
-The MIT License (MIT). Please see [License File](LISENCE) for more information.
+The MIT License (MIT). Please see [License File](LICENSE) for more information.

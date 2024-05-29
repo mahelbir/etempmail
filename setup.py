@@ -6,10 +6,10 @@ with open("README.md", "r", encoding="utf-8") as fh:
 pkg_name = "etempmail"
 setuptools.setup(
     name=pkg_name,
-    version="3.0.0.0",
+    version="4.0.0.0",
     author="Mahmuthan Elbir",
     author_email="me@mahmuthanelbir.com.tr",
-    description="A simple Python module to get free disposable temporary email address",
+    description="A simple module to get free disposable temporary email address",
     long_description=long_description,
     long_description_content_type="text/markdown",
     keywords=['temp mail', 'temporary mail', 'disposable mail', 'temp email', 'etempmail', 'etempmail.com'],
@@ -23,7 +23,7 @@ setuptools.setup(
     packages=[pkg_name],
     include_package_data=True,
     install_requires=[
-        "requests~=2.31.0"
+        "requests~=2.28.2"
     ],
     python_requires=">=3.7"
 )
